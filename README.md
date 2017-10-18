@@ -34,9 +34,10 @@ Mysql常见注意事项
     GROUP BY
     AttendanceDate
 
-    -- 注意 AND DATE_FORMAT(AttendanceDate , '%Y-%m-%d') BETWEEN '2017-10-09' AND '2017-10-15'（后面用t1表示） 该条件会影响到 AND KidID NOT IN(
-    ...AND DATE_FORMAT(AT .AttendanceDate , '%Y-%m-%d') = a.AttendanceDate ) (后面用t2表示)里面的条件关联查询，如果我们先将t1 放到t2前面，则
-    t2里面的a.AttendanceDate变为常量值，将m*n的查询变为m*N(一个时间段，为一个具体数字常量)，查询效率提高很多
+    -- 注意 AND DATE_FORMAT(AttendanceDate , '%Y-%m-%d') BETWEEN '2017-10-09' AND '2017-10-15'（后面用t1表示）
+    该条件会影响到 AND KidID NOT IN(...AND DATE_FORMAT(AT .AttendanceDate , '%Y-%m-%d') = a.AttendanceDate ) 
+    (后面用t2表示)里面的条件关联查询，如果我们先将t1 放到t2前面，则t2里面的a.AttendanceDate变为常量值，
+    将m*n的查询变为m*N(一个时间段，为一个具体数字常量)，查询效率提高很多
 
 
     修改后sql：
@@ -71,12 +72,6 @@ Mysql常见注意事项
     以后优先把常量条件放到前面
     在本地测试
     ```
-
-
-### Git 使用
-
-1. 廖雪峰Git[教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
-2. Pro Git[教程](https://git-scm.com/book/zh/v2)
 
 参考链接
 --------
