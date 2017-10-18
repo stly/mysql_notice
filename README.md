@@ -4,7 +4,8 @@ Mysql常见注意事项
 举例
 ----
 
-1. sql where 条件的执行顺序。
+### sql的执行顺序。
+1. where条件的执行顺序
     ```mysql
     SELECT
     Count(DISTINCT kidid , AttendanceDate) AS attendanceCount ,
