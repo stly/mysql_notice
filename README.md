@@ -77,4 +77,3 @@ Mysql常见注意事项
 --------
 
 * [Mysql官网](https://www.mysql.com/)
-    t2里面的
