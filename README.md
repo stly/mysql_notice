@@ -7,7 +7,6 @@ Mysql常见注意事项
 ### sql的执行顺序。
 1. where条件的执行顺序
     ```mysql
-    select * from t
     SELECT
     Count(DISTINCT kidid , AttendanceDate) AS attendanceCount ,
     schoolID ,
@@ -86,8 +85,8 @@ Mysql常见注意事项
    select * from (
       select * from t
     )t1
-    这样会增大一倍的查询时间,在实际编码中我们常常会犯类似的错误，
-    这一点我们需要注意。
+    /*这样会增大一倍的查询时间,在实际编码中我们常常会犯类似的错误，
+    这一点我们需要注意。*/
     ```
 参考链接
 --------
