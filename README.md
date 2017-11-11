@@ -78,9 +78,10 @@ Mysql常见注意事项
     */
     ```
 ### sql的嵌套
+
     ```mysql
     select * from t
-    -- 防止sql无谓的嵌套
+    /* 防止sql无谓的嵌套 */
    select * from (
       select * from t
     )t1
