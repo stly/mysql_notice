@@ -7,6 +7,7 @@ Mysql常见注意事项
 ### sql的执行顺序。
 1. where条件的执行顺序
     ```mysql
+    select * from t
     SELECT
     Count(DISTINCT kidid , AttendanceDate) AS attendanceCount ,
     schoolID ,
