@@ -77,8 +77,8 @@ Mysql常见注意事项
     在本地测试优化前耗时160ms，优化后32ms
     */
     ```
-### sql的嵌套
-
+### sql的嵌套.
+2. sql的嵌套
     ```mysql
     select * from t
     /* 防止sql无谓的嵌套 */
